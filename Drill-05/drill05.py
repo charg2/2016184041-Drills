@@ -51,6 +51,7 @@ def render():
     #    position_x, position_y = destination_x, destination_y;
     
 
+
     if state == 1:
         move_line((position_x, position_y), (destination_x, destination_y));
         if dir == 1: frame_y = 100;
