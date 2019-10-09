@@ -4,6 +4,7 @@ import os;
 
 KPU_WIDTH, KPU_HEIGHT = 1280, 1024;
 MOUSE_WIDTH, MOUSE_HEIGHT = 50, 52;
+CHARACTER_WIDTH, CHARACTER_HEIGHT = 42, 92;
 
 destination_x, destination_y = 0 , 0;  
 position_x, position_y = 0 , 0;  
@@ -24,7 +25,7 @@ def initialize():
     global kpu_ground;
     global arrow;
     
-    os.chdir("C:\\_Git\\2dgp\\2DGP\\assets");
+    os.chdir("assets");
     
     pico2d.open_canvas(KPU_WIDTH, KPU_HEIGHT);
     #pico2d.hide_cursor();
@@ -90,6 +91,7 @@ def input():
     global destination_x, destination_y;
     global MOUSE_WIDTH, MOUSE_HEIGHT;
     global running, dir, state;
+    global CHARACTER_WIDTH;
 
     events = pico2d.get_events();
     for event in events:
@@ -103,7 +105,7 @@ def input():
             
         elif event.type == SDL_MOUSEBUTTONDOWN and event.button == SDL_BUTTON_LEFT:
             print( event.x, event.y ); #클릭시 
-            destination_x, destination_y = event.x , KPU_HEIGHT - 1-  event.y + ( MOUSE_HEIGHT // 2 );
+            destination_x, destination_y = event.x - (CHARACTER_WIDTH // 2), KPU_HEIGHT - 1-  event.y + ( MOUSE_HEIGHT // 2 );
             state = 1;
             if destination_x < position_x : 
                 dir = -1;
