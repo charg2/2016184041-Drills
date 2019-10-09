@@ -7,6 +7,7 @@ import os;
 KPU_WIDTH, KPU_HEIGHT = 1280, 1024;
 
 
+
 kpu_ground:Image;
 character:Image;
 x, y = 0, 90;
