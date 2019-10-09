@@ -49,7 +49,7 @@ def initialize():
     character   = load_image('animation_sheet.png');
     grass       = load_image('grass.png');
 
-
+    
 def finalize():
     pico2d.close_canvas();
 
