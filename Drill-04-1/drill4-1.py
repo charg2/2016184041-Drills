@@ -41,7 +41,7 @@ def initialize():
     global character;
     global grass;
     
-    os.chdir("C:\\_Git\\2016184041-Drills\\Drill-04-1\\assets");
+    os.chdir("assets");
     
     pico2d.open_canvas();
     pico2d.hide_cursor();
