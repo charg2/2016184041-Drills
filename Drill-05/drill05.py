@@ -1,4 +1,4 @@
-
+﻿
 from pico2d import *;
 import os;
 
@@ -38,6 +38,7 @@ def render():
     global mouse_x, mouse_y;
     global position_x, position_y;
     global frame_x, frame_y;
+    global dir;
 
     pico2d.clear_canvas();
     kpu_ground.draw(KPU_WIDTH // 2, KPU_HEIGHT // 2);
@@ -59,7 +60,7 @@ def render():
 def input():
     global mouse_x, mouse_y;
     global destination_x, destination_y;
-    global running;
+    global running, dir;
 
     events = pico2d.get_events();
     for event in events:
@@ -71,9 +72,16 @@ def input():
         elif event.type == SDL_MOUSEMOTION:
             mouse_x, mouse_y = event.x, KPU_HEIGHT - 1-  event.y;
             
-        elif event.type == SDL_MOUSEBUTTONDOWN and event.type == SDL_MOUSEBUTTONDOWN:
+        elif event.type == SDL_MOUSEBUTTONDOWN and event.button == SDL_BUTTON_LEFT:
             print( event.x, event.y ); #클릭시 
             destination_x, destination_y = event.x, KPU_HEIGHT - 1-  event.y;
+            if destination_x < position_x : 
+                dir = -1;
+            elif destination_x > position_x : 
+                dir = 1;
+            else :
+                dir = 0;
+
         #elif event.type == SDL_MOUSEWHEEL:
         #    pass;
 
