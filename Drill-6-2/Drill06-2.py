@@ -60,23 +60,35 @@ def input():
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             running = False;
 
-zz = 0;
+step = 0;
 def update():
     global position_x, position_y;
-    global zz;
+    global step;
     global random_course;
     global frame_y;
     global course_idx, MAX_RANDOM_INDEX;
 
-    for i in range(zz, 50):
+    for i in range(step, 50):
         next_idx = (course_idx + 1) % MAX_RANDOM_INDEX;
         next_next_idx = (course_idx + 2) % MAX_RANDOM_INDEX;
         t = i / 100;
         position_x = (2*t**2-3*t+1) * random_course[course_idx][0] + (-4*t**2+4*t)* random_course[next_idx][0] + (2*t**2-t) * random_course[next_next_idx][0];
         position_y = (2*t**2-3*t+1) * random_course[course_idx][1] + (-4*t**2+4*t)* random_course[next_idx][1] + (2*t**2-t) * random_course[next_next_idx][1];
-        zz += 1;
+        step += 1;
 
+        if 25 == step : # 중간 포인트 이동후 할것.
+            if random_course[course_idx][0] < random_course[next_idx][0]:
+                frame_y = 100;
+            elif random_course[course_idx][0] > random_course[next_idx][0]:
+                frame_y = 0;
 
+        if 50 == step : # 다음 포인트 이동후 할것.
+            if random_course[next_idx][0] < random_course[next_next_idx][0]:
+                frame_y = 100;
+            elif random_course[next_idx][0] > random_course[next_next_idx][0]:
+                frame_y = 0;
+            course_idx = next_idx;
+            step = 0;
         return ;
 
 
