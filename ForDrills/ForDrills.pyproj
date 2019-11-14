@@ -1,0 +1,76 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>ddad5d91-b078-41a1-8d36-f3ef9980ebbb</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Drill-10\mygame.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>ForDrills</Name>
+    <RootNamespace>ForDrills</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Drill-10\" />
+    <Folder Include="Lecture14_Collision\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Drill-10\.gitattributes" />
+    <Content Include="Drill-10\.gitignore" />
+    <Content Include="Drill-10\animation_sheet.png" />
+    <Content Include="Drill-10\ball21x21.png" />
+    <Content Include="Drill-10\bird_animation.png" />
+    <Content Include="Drill-10\ENCR10B.TTF" />
+    <Content Include="Drill-10\grass.png" />
+    <Content Include="Lecture14_Collision\.gitattributes" />
+    <Content Include="Lecture14_Collision\.gitignore" />
+    <Content Include="Lecture14_Collision\animation_sheet.png" />
+    <Content Include="Lecture14_Collision\ball21x21.png" />
+    <Content Include="Lecture14_Collision\ball41x41.png" />
+    <Content Include="Lecture14_Collision\brick180x40.png" />
+    <Content Include="Lecture14_Collision\ENCR10B.TTF" />
+    <Content Include="Lecture14_Collision\grass.png" />
+    <Content Include="Lecture14_Collision\run_animation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Drill-10\ball.py" />
+    <Compile Include="Drill-10\Bird.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Drill-10\boy.py" />
+    <Compile Include="Drill-10\game_framework.py" />
+    <Compile Include="Drill-10\game_world.py" />
+    <Compile Include="Drill-10\grass.py" />
+    <Compile Include="Drill-10\main_state.py" />
+    <Compile Include="Drill-10\mygame.py" />
+    <Compile Include="Lecture14_Collision\ball.py" />
+    <Compile Include="Lecture14_Collision\boy.py" />
+    <Compile Include="Lecture14_Collision\boys_team_1000.py" />
+    <Compile Include="Lecture14_Collision\game_framework.py" />
+    <Compile Include="Lecture14_Collision\game_world.py" />
+    <Compile Include="Lecture14_Collision\globals.py" />
+    <Compile Include="Lecture14_Collision\grass.py" />
+    <Compile Include="Lecture14_Collision\main_state.py" />
+    <Compile Include="Lecture14_Collision\mygame.py" />
+    <Compile Include="Lecture14_Collision\test_globals.py" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
