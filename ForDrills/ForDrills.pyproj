@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ddad5d91-b078-41a1-8d36-f3ef9980ebbb</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Drill-10\mygame.py</StartupFile>
+    <StartupFile>Lecture14_Collision\mygame.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -62,6 +62,9 @@
     <Compile Include="Lecture14_Collision\grass.py" />
     <Compile Include="Lecture14_Collision\main_state.py" />
     <Compile Include="Lecture14_Collision\mygame.py" />
+    <Compile Include="Lecture14_Collision\terrain.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Lecture14_Collision\test_globals.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
