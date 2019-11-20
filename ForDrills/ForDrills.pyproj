@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ddad5d91-b078-41a1-8d36-f3ef9980ebbb</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Lecture14_Collision\mygame.py</StartupFile>
+    <StartupFile>Lecture15_AI\mygame.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,11 @@
   <ItemGroup>
     <Folder Include="Drill-10\" />
     <Folder Include="Lecture14_Collision\" />
+    <Folder Include="Lecture15_AI\" />
+    <Folder Include="Lecture15_AI\jackfree\" />
+    <Folder Include="Lecture15_AI\zombiefiles\" />
+    <Folder Include="Lecture15_AI\zombiefiles\female\" />
+    <Folder Include="Lecture15_AI\zombiefiles\male\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Drill-10\.gitattributes" />
@@ -41,6 +46,164 @@
     <Content Include="Lecture14_Collision\ENCR10B.TTF" />
     <Content Include="Lecture14_Collision\grass.png" />
     <Content Include="Lecture14_Collision\run_animation.png" />
+    <Content Include="Lecture15_AI\.gitattributes" />
+    <Content Include="Lecture15_AI\.gitignore" />
+    <Content Include="Lecture15_AI\animation_sheet.png" />
+    <Content Include="Lecture15_AI\ball21x21.png" />
+    <Content Include="Lecture15_AI\ball41x41.png" />
+    <Content Include="Lecture15_AI\ENCR10B.TTF" />
+    <Content Include="Lecture15_AI\jackfree\Dead %281%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Dead %2810%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Dead %282%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Dead %283%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Dead %284%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Dead %285%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Dead %286%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Dead %287%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Dead %288%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Dead %289%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Idle %281%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Idle %2810%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Idle %282%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Idle %283%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Idle %284%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Idle %285%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Idle %286%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Idle %287%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Idle %288%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Idle %289%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Jump %281%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Jump %2810%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Jump %282%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Jump %283%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Jump %284%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Jump %285%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Jump %286%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Jump %287%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Jump %288%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Jump %289%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Run %281%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Run %282%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Run %283%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Run %284%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Run %285%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Run %286%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Run %287%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Run %288%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Slide %281%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Slide %2810%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Slide %282%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Slide %283%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Slide %284%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Slide %285%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Slide %286%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Slide %287%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Slide %288%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Slide %289%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Walk %281%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Walk %2810%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Walk %282%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Walk %283%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Walk %284%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Walk %285%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Walk %286%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Walk %287%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Walk %288%29.png" />
+    <Content Include="Lecture15_AI\jackfree\Walk %289%29.png" />
+    <Content Include="Lecture15_AI\KPU_GROUND.png" />
+    <Content Include="Lecture15_AI\run_animation.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Attack %281%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Attack %2810%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Attack %282%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Attack %283%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Attack %284%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Attack %285%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Attack %286%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Attack %287%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Attack %288%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Attack %289%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Dead %281%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Dead %2810%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Dead %2811%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Dead %2812%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Dead %282%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Dead %283%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Dead %284%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Dead %285%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Dead %286%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Dead %287%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Dead %288%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Dead %289%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %281%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %2810%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %2811%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %2812%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %2813%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %2814%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %2815%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %282%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %283%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %284%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %285%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %286%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %287%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %288%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Idle %289%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Walk %281%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Walk %2810%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Walk %282%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Walk %283%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Walk %284%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Walk %285%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Walk %286%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Walk %287%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Walk %288%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\female\Walk %289%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Attack %281%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Attack %282%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Attack %283%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Attack %284%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Attack %285%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Attack %286%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Attack %287%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Attack %288%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Dead %281%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Dead %2810%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Dead %2811%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Dead %2812%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Dead %282%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Dead %283%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Dead %284%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Dead %285%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Dead %286%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Dead %287%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Dead %288%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Dead %289%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %281%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %2810%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %2811%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %2812%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %2813%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %2814%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %2815%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %282%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %283%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %284%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %285%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %286%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %287%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %288%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Idle %289%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Walk %281%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Walk %2810%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Walk %282%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Walk %283%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Walk %284%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Walk %285%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Walk %286%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Walk %287%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Walk %288%29.png" />
+    <Content Include="Lecture15_AI\zombiefiles\male\Walk %289%29.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drill-10\ball.py" />
@@ -66,6 +229,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Lecture14_Collision\test_globals.py" />
+    <Compile Include="Lecture15_AI\BehaviorTree.py" />
+    <Compile Include="Lecture15_AI\boy.py" />
+    <Compile Include="Lecture15_AI\game_framework.py" />
+    <Compile Include="Lecture15_AI\game_world.py" />
+    <Compile Include="Lecture15_AI\ground.py" />
+    <Compile Include="Lecture15_AI\main_state.py" />
+    <Compile Include="Lecture15_AI\mygame.py" />
+    <Compile Include="Lecture15_AI\zombie.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
