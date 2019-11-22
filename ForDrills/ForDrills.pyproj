@@ -229,8 +229,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Lecture14_Collision\test_globals.py" />
+    <Compile Include="Lecture15_AI\ball.py" />
     <Compile Include="Lecture15_AI\BehaviorTree.py" />
     <Compile Include="Lecture15_AI\boy.py" />
+    <Compile Include="Lecture15_AI\const.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Lecture15_AI\game_framework.py" />
     <Compile Include="Lecture15_AI\game_world.py" />
     <Compile Include="Lecture15_AI\ground.py" />
