@@ -69,7 +69,7 @@ class Zombie:
     def find_player(self):
         boy = main_state.get_boy();
         distance = (boy.x - self.x ) ** 2 + ( boy.y - self.y ) ** 2;
-        if distance < ( PIXEL_PER_METER * 10 ) ** 2:
+        if distance < ( PIXEL_PER_METER * 8 ) ** 2:
             self.dir = math.atan2(boy.y - self.y, boy.x - self.x);
             return BehaviorTree.SUCCESS;
         else:
@@ -78,11 +78,13 @@ class Zombie:
         pass
 
     def find_ball(self):
+        print("try find_ball");
         balls = main_state.get_balls();
         for ball in balls:
             distance = (ball.x - self.x ) ** 2 + ( ball.y - self.y ) ** 2;
-            if distance < ( PIXEL_PER_METER * 10 ) ** 2:
+            if distance < ( PIXEL_PER_METER * 5 ) ** 2:
                 self.dir = math.atan2(ball.y - self.y, ball.x - self.x); #있으면 가고 아니면 말고
+                print("find ball!!")
                 return BehaviorTree.SUCCESS;
         #없으면 업는대로 ㅇㅇ
         self.speed = 0;
@@ -95,8 +97,19 @@ class Zombie:
         
         return BehaviorTree.SUCCESS;
 
+    def move_away_from_player(self):
+        boy = main_state.get_boy();
+        if self.current_hp < boy.current_hp:
+            self.speed = -RUN_SPEED_PPS;
+            self.calculate_current_position();
+            
+            return BehaviorTree.SUCCESS;
+        else:
+            return BehaviorTree.FAIL;
+
     def move_to_ball(self):
         self.speed = RUN_SPEED_PPS;
+        print("move_to_ball");
         self.calculate_current_position();
         
         return BehaviorTree.SUCCESS;
@@ -120,33 +133,42 @@ class Zombie:
         else: 
             return BehaviorTree.RUNNING
 
-    def move_to_ball(self):
-        self.speed = RUN_SPEED_PPS ;
-        self.calculate_current_position();
-        distance = (self.target_x - self.x)**2 + (self.target_y - self.y)**2;
-        if distance < PIXEL_PER_METER**2: 
-            return BehaviorTree.SUCCESS;
-        else: 
-            return BehaviorTree.RUNNINGl;
-        pass;
 
-    def move_to_boy(self):
-        self.speed = RUN_SPEED_PPS 
-        self.calculate_current_position()
-        distance = (self.target_x - self.x)**2 + (self.target_y - self.y)**2
-        if distance < PIXEL_PER_METER**2: return BehaviorTree.SUCCESS 
-        else: return BehaviorTree.RUNNING
-        pass;
+    #// Lecture15_AI
+    #def build_behavior_tree(self):
+    #    wander_node = LeafNode("Wander", self.wander);
+    #    find_player_node = LeafNode("Find Player", self.find_player);
+    #    move_to_player_node = LeafNode("Move to Player", self.move_to_player);
+    #    chase_node = SequenceNode("Chase");
+    #    chase_node.add_children(find_player_node, move_to_player_node);
+    #    wander_chase_node = SelectorNode("WanderChase");
+    #    wander_chase_node.add_children(chase_node, wander_node);
+    #    self.bt = BehaviorTree(wander_chase_node)
+    #    pass
 
-
+    
     def build_behavior_tree(self):
-        wander_node = LeafNode("Wander", self.wander);
-        find_player_node = LeafNode("Find Player", self.find_player);
         move_to_player_node = LeafNode("Move to Player", self.move_to_player);
-        chase_node = SequenceNode("Chase");
-        chase_node.add_children(find_player_node, move_to_player_node);
+        move_away_from_player_node = LeafNode("Move away from Player", self.move_away_from_player);
+
+        choice_action_node = SelectorNode("Choice Action");
+        choice_action_node.add_children(move_away_from_player_node , move_to_player_node);
+
+        find_player_node = LeafNode("Find Player", self.find_player);
+        
+        chase_player_node = SequenceNode("Chase Player");
+        chase_player_node.add_children(find_player_node, choice_action_node);
+        
+        find_ball_node = LeafNode("Find Ball", self.find_ball);
+        move_to_ball_node = LeafNode("Move to Ball", self.move_to_ball);
+        chase_ball_node = SequenceNode("Chase Ball");
+        chase_ball_node.add_children(find_ball_node, move_to_ball_node);
+
+        wander_node = LeafNode("Wander", self.wander);
+
         wander_chase_node = SelectorNode("WanderChase");
-        wander_chase_node.add_children(chase_node, wander_node);
+        wander_chase_node.add_children(chase_player_node, chase_ball_node, wander_node);
+
         self.bt = BehaviorTree(wander_chase_node)
         pass
 

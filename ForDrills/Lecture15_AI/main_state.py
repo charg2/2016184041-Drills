@@ -16,6 +16,7 @@ name = "MainState"
 
 boy = None
 balls = [];
+big_balls = [];
 zombie = None
 
 
@@ -49,9 +50,12 @@ def enter():
     game_world.add_object(zombie, 1)
 
     global balls;
-    balls = [Ball() for i in range(27)];
+    balls = [Ball() for i in range(10)];
     game_world.add_objects(balls, 1)
 
+    global big_balls;
+    big_balls = [BigBall() for i in range(10)];
+    game_world.add_objects(big_balls, 1)
 
     ground = Ground()
     game_world.add_object(ground, 0)
@@ -79,7 +83,7 @@ def handle_events():
 
 
 def update():
-    global balls, boy, zombie;
+    global big_balls,balls, boy, zombie;
 
     for game_object in game_world.all_objects():
         game_object.update()
@@ -90,6 +94,13 @@ def update():
                 boy.increase_hp(ball.hp);
                 balls.remove(ball);
                 game_world.remove_object(ball);
+
+    for big_ball in big_balls:
+        if boy:
+            if collide(boy, big_ball):
+                boy.increase_hp(big_ball.hp);
+                big_balls.remove(big_ball);
+                game_world.remove_object(big_ball);
     
     for ball in balls:
         if zombie:
@@ -97,6 +108,14 @@ def update():
                 zombie.increase_hp(ball.hp);
                 balls.remove(ball);
                 game_world.remove_object(ball);
+
+    for big_ball in big_balls:
+        if boy:
+            if collide(boy, big_ball):
+                boy.increase_hp(big_ball.hp);
+                big_balls.remove(big_ball);
+                game_world.remove_object(big_ball);
+    
                 
             
 
