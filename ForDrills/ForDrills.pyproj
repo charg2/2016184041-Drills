@@ -22,6 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Drill-10\" />
+    <Folder Include="Drill12\" />
     <Folder Include="Lecture14_Collision\" />
     <Folder Include="Lecture15_AI\" />
     <Folder Include="Lecture15_AI\jackfree\" />
@@ -51,7 +52,6 @@
     <Content Include="Lecture14_Collision\ENCR10B.TTF" />
     <Content Include="Lecture14_Collision\grass.png" />
     <Content Include="Lecture14_Collision\run_animation.png" />
-
     <Content Include="Lecture15_AI\.gitattributes" />
     <Content Include="Lecture15_AI\.gitignore" />
     <Content Include="Lecture15_AI\animation_sheet.png" />
@@ -374,7 +374,6 @@
     <Content Include="Lecture16_Game_Data_Management\zombiefiles\male\Walk %288%29.png" />
     <Content Include="Lecture16_Game_Data_Management\zombiefiles\male\Walk %289%29.png" />
     <Content Include="Lecture16_Game_Data_Management\zombie_data.json" />
-
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drill-10\ball.py" />
@@ -406,7 +405,6 @@
     <Compile Include="Drill12\const.py">
       <SubType>Code</SubType>
     </Compile>
-
     <Compile Include="Lecture15_AI\game_framework.py" />
     <Compile Include="Lecture15_AI\game_world.py" />
     <Compile Include="Lecture15_AI\ground.py" />
@@ -433,7 +431,6 @@
     <Compile Include="Lecture16_Game_Data_Management\wannaone.py" />
     <Compile Include="Lecture16_Game_Data_Management\world_build_state.py" />
     <Compile Include="Lecture16_Game_Data_Management\zombie.py" />
-
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
