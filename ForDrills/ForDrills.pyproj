@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ddad5d91-b078-41a1-8d36-f3ef9980ebbb</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Lecture16_Game_Data_Management\mygame.py</StartupFile>
+    <StartupFile>Lecture17_Scrolling_copy\mygame.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -34,6 +34,13 @@
     <Folder Include="Lecture16_Game_Data_Management\zombiefiles\" />
     <Folder Include="Lecture16_Game_Data_Management\zombiefiles\female\" />
     <Folder Include="Lecture16_Game_Data_Management\zombiefiles\male\" />
+    <Folder Include="Lecture17_Scrolling - 복사본\" />
+    <Folder Include="Lecture17_Scrolling - 복사본\__pycache__\" />
+    <Folder Include="Lecture17_Scrolling\" />
+    <Folder Include="Lecture17_Scrolling_copy\" />
+    <Folder Include="Lecture17_Scrolling_copy\__pycache__\" />
+    <Folder Include="Lecture17_Scrolling_복사본\" />
+    <Folder Include="Lecture18_Sound\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Drill-10\.gitattributes" />
@@ -374,6 +381,47 @@
     <Content Include="Lecture16_Game_Data_Management\zombiefiles\male\Walk %288%29.png" />
     <Content Include="Lecture16_Game_Data_Management\zombiefiles\male\Walk %289%29.png" />
     <Content Include="Lecture16_Game_Data_Management\zombie_data.json" />
+    <Content Include="Lecture17_Scrolling - 복사본\.gitattributes" />
+    <Content Include="Lecture17_Scrolling - 복사본\.gitignore" />
+    <Content Include="Lecture17_Scrolling - 복사본\animation_sheet.png" />
+    <Content Include="Lecture17_Scrolling - 복사본\ball21x21.png" />
+    <Content Include="Lecture17_Scrolling - 복사본\ENCR10B.TTF" />
+    <Content Include="Lecture17_Scrolling - 복사본\futsal_court.png" />
+    <Content Include="Lecture17_Scrolling - 복사본\__pycache__\game_framework.cpython-37.pyc" />
+    <Content Include="Lecture17_Scrolling - 복사본\__pycache__\game_world.cpython-37.pyc" />
+    <Content Include="Lecture17_Scrolling - 복사본\__pycache__\main_state.cpython-37.pyc" />
+    <Content Include="Lecture17_Scrolling\.gitattributes" />
+    <Content Include="Lecture17_Scrolling\.gitattributes" />
+    <Content Include="Lecture17_Scrolling\.gitignore" />
+    <Content Include="Lecture17_Scrolling\.gitignore" />
+    <Content Include="Lecture17_Scrolling\animation_sheet.png" />
+    <Content Include="Lecture17_Scrolling\animation_sheet.png" />
+    <Content Include="Lecture17_Scrolling\ball21x21.png" />
+    <Content Include="Lecture17_Scrolling\ENCR10B.TTF" />
+    <Content Include="Lecture17_Scrolling\ENCR10B.TTF" />
+    <Content Include="Lecture17_Scrolling\futsal_court.png" />
+    <Content Include="Lecture17_Scrolling\futsal_court.png" />
+    <Content Include="Lecture17_Scrolling_copy\.gitattributes" />
+    <Content Include="Lecture17_Scrolling_copy\.gitignore" />
+    <Content Include="Lecture17_Scrolling_copy\animation_sheet.png" />
+    <Content Include="Lecture17_Scrolling_copy\ball21x21.png" />
+    <Content Include="Lecture17_Scrolling_copy\ENCR10B.TTF" />
+    <Content Include="Lecture17_Scrolling_copy\futsal_court.png" />
+    <Content Include="Lecture17_Scrolling_copy\__pycache__\ball.cpython-37.pyc" />
+    <Content Include="Lecture17_Scrolling_copy\__pycache__\boy.cpython-37.pyc" />
+    <Content Include="Lecture17_Scrolling_copy\__pycache__\game_framework.cpython-37.pyc" />
+    <Content Include="Lecture17_Scrolling_copy\__pycache__\game_world.cpython-37.pyc" />
+    <Content Include="Lecture17_Scrolling_copy\__pycache__\main_state.cpython-37.pyc" />
+    <Content Include="Lecture18_Sound\.gitattributes" />
+    <Content Include="Lecture18_Sound\.gitignore" />
+    <Content Include="Lecture18_Sound\animation_sheet.png" />
+    <Content Include="Lecture18_Sound\ball21x21.png" />
+    <Content Include="Lecture18_Sound\ENCR10B.TTF" />
+    <Content Include="Lecture18_Sound\football.mp3" />
+    <Content Include="Lecture18_Sound\futsal_court.png" />
+    <Content Include="Lecture18_Sound\grass.png" />
+    <Content Include="Lecture18_Sound\pickup.wav" />
+    <Content Include="Lecture18_Sound\run_animation.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Drill-10\ball.py" />
@@ -431,6 +479,41 @@
     <Compile Include="Lecture16_Game_Data_Management\wannaone.py" />
     <Compile Include="Lecture16_Game_Data_Management\world_build_state.py" />
     <Compile Include="Lecture16_Game_Data_Management\zombie.py" />
+    <Compile Include="Lecture17_Scrolling - 복사본\background.py" />
+    <Compile Include="Lecture17_Scrolling - 복사본\ball.py" />
+    <Compile Include="Lecture17_Scrolling - 복사본\boy.py" />
+    <Compile Include="Lecture17_Scrolling - 복사본\game_framework.py" />
+    <Compile Include="Lecture17_Scrolling - 복사본\game_world.py" />
+    <Compile Include="Lecture17_Scrolling - 복사본\main_state.py" />
+    <Compile Include="Lecture17_Scrolling - 복사본\mygame.py" />
+    <Compile Include="Lecture17_Scrolling\background.py" />
+    <Compile Include="Lecture17_Scrolling\background.py" />
+    <Compile Include="Lecture17_Scrolling\ball.py" />
+    <Compile Include="Lecture17_Scrolling\boy.py" />
+    <Compile Include="Lecture17_Scrolling\boy.py" />
+    <Compile Include="Lecture17_Scrolling\game_framework.py" />
+    <Compile Include="Lecture17_Scrolling\game_framework.py" />
+    <Compile Include="Lecture17_Scrolling\game_world.py" />
+    <Compile Include="Lecture17_Scrolling\game_world.py" />
+    <Compile Include="Lecture17_Scrolling\main_state.py" />
+    <Compile Include="Lecture17_Scrolling\main_state.py" />
+    <Compile Include="Lecture17_Scrolling\mygame.py" />
+    <Compile Include="Lecture17_Scrolling\mygame.py" />
+    <Compile Include="Lecture17_Scrolling_copy\background.py" />
+    <Compile Include="Lecture17_Scrolling_copy\ball.py" />
+    <Compile Include="Lecture17_Scrolling_copy\boy.py" />
+    <Compile Include="Lecture17_Scrolling_copy\game_framework.py" />
+    <Compile Include="Lecture17_Scrolling_copy\game_world.py" />
+    <Compile Include="Lecture17_Scrolling_copy\main_state.py" />
+    <Compile Include="Lecture17_Scrolling_copy\mygame.py" />
+    <Compile Include="Lecture18_Sound\background.py" />
+    <Compile Include="Lecture18_Sound\ball.py" />
+    <Compile Include="Lecture18_Sound\boy.py" />
+    <Compile Include="Lecture18_Sound\game_framework.py" />
+    <Compile Include="Lecture18_Sound\game_world.py" />
+    <Compile Include="Lecture18_Sound\grass.py" />
+    <Compile Include="Lecture18_Sound\main_state.py" />
+    <Compile Include="Lecture18_Sound\mygame.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
