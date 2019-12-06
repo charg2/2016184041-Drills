@@ -36,6 +36,7 @@
     <Folder Include="Lecture16_Game_Data_Management\zombiefiles\male\" />
     <Folder Include="Lecture17_Scrolling - 복사본\" />
     <Folder Include="Lecture17_Scrolling - 복사본\__pycache__\" />
+    <Folder Include="Lecture17_Scrolling1\" />
     <Folder Include="Lecture17_Scrolling\" />
     <Folder Include="Lecture17_Scrolling_copy\" />
     <Folder Include="Lecture17_Scrolling_copy\__pycache__\" />
@@ -390,6 +391,12 @@
     <Content Include="Lecture17_Scrolling - 복사본\__pycache__\game_framework.cpython-37.pyc" />
     <Content Include="Lecture17_Scrolling - 복사본\__pycache__\game_world.cpython-37.pyc" />
     <Content Include="Lecture17_Scrolling - 복사본\__pycache__\main_state.cpython-37.pyc" />
+    <Content Include="Lecture17_Scrolling1\.gitattributes" />
+    <Content Include="Lecture17_Scrolling1\.gitignore" />
+    <Content Include="Lecture17_Scrolling1\animation_sheet.png" />
+    <Content Include="Lecture17_Scrolling1\ball21x21.png" />
+    <Content Include="Lecture17_Scrolling1\ENCR10B.TTF" />
+    <Content Include="Lecture17_Scrolling1\futsal_court.png" />
     <Content Include="Lecture17_Scrolling\.gitattributes" />
     <Content Include="Lecture17_Scrolling\.gitattributes" />
     <Content Include="Lecture17_Scrolling\.gitignore" />
@@ -486,6 +493,15 @@
     <Compile Include="Lecture17_Scrolling - 복사본\game_world.py" />
     <Compile Include="Lecture17_Scrolling - 복사본\main_state.py" />
     <Compile Include="Lecture17_Scrolling - 복사본\mygame.py" />
+    <Compile Include="Lecture17_Scrolling1\background.py" />
+    <Compile Include="Lecture17_Scrolling1\ball.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lecture17_Scrolling1\boy.py" />
+    <Compile Include="Lecture17_Scrolling1\game_framework.py" />
+    <Compile Include="Lecture17_Scrolling1\game_world.py" />
+    <Compile Include="Lecture17_Scrolling1\main_state.py" />
+    <Compile Include="Lecture17_Scrolling1\mygame.py" />
     <Compile Include="Lecture17_Scrolling\background.py" />
     <Compile Include="Lecture17_Scrolling\background.py" />
     <Compile Include="Lecture17_Scrolling\ball.py" />
